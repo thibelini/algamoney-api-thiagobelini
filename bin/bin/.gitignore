@@ -1,0 +1,11 @@
+/.idea/
+/logs/
+/target/
+*.iml
+*.classpath
+*.project
+/.settings/
+*.attach_pid16811
+*.attach_pid22418
+*.attach_pid*
+*.factorypath
