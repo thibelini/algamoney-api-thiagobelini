@@ -1,3 +1,8 @@
+DROP TABLE usuario_permissao;
+DROP TABLE usuario;
+DROP TABLE permissao;
+
+
 CREATE TABLE usuario(
 	codigo BIGINT(20) PRIMARY KEY,
 	nome VARCHAR(50) NOT NULL,
@@ -18,8 +23,8 @@ CREATE TABLE usuario_permissao (
 	FOREIGN KEY (codigo_permissao) REFERENCES permissao(codigo)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO usuario (codigo, nome, email, senha) VALUES (1, 'Administrador', 'admin@teste.com.br', 'admin');
-INSERT INTO usuario (codigo, nome, email, senha) VALUES (2, 'Thiago Belini', 'thiago@teste.com.br', 'admin');
+INSERT INTO usuario (codigo, nome, email, senha) VALUES (1, 'Administrador', 'thibelini@gmail.com', '$2a$10$edGY5.NFSPx9NdEb.InIQuxncxcfey3OvYLyIdv.juJa/8ak5SE5C');
+INSERT INTO usuario (codigo, nome, email, senha) VALUES (2, 'Thiago Belini', 'thiago@teste.com.br', '$2a$10$edGY5.NFSPx9NdEb.InIQuxncxcfey3OvYLyIdv.juJa/8ak5SE5C');
 
 INSERT INTO permissao (codigo, descricao) VALUES (1, 'ROLE_CADASTRAR_CATEGORIA');
 INSERT INTO permissao (codigo, descricao) VALUES (2, 'ROLE_PESQUISAR_CATEGORIA');
